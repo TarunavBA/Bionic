@@ -1,4 +1,3 @@
-
 from core.JsActivities import alert
 from core import Head
 from core import core

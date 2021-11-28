@@ -1,8 +1,8 @@
-def Div(*Tags,classname=""):
-    HtmlTagsList =  [*Tags]
+def Div(*Tags, classname=""):
+    HtmlTagsList = [*Tags]
     DivTags = ""
 
     for ele in HtmlTagsList:
-        DivTags+=ele
+        DivTags += ele
 
     return f"<div class='{classname}' >{DivTags}</div>"

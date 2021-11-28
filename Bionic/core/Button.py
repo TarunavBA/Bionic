@@ -1,14 +1,15 @@
 def Button(
     width="20%",
     classname="",
-        Text="",
-        OnTap="",
-        Margin="1px",
-        Min_width="10%",
-        Bg="#2c9bff",
-        Text_align="center",
-        FontColor="#ffffff",
-        BorderRadius="5px"):
+    Text="",
+    OnTap="",
+    Margin="1px",
+    Min_width="10%",
+    Bg="#2c9bff",
+    Text_align="center",
+    FontColor="#ffffff",
+    BorderRadius="5px",
+):
 
     style = f"""
             margin:        {Margin};    

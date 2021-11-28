@@ -5,6 +5,7 @@
 # improting reqired modules
 from typing import Tuple
 import sys
+
 try:
     import main
 except:
@@ -19,15 +20,15 @@ from importlib import reload
 
 
 class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    HEADER = "\033[95m"
+    OKBLUE = "\033[94m"
+    OKCYAN = "\033[96m"
+    OKGREEN = "\033[92m"
+    WARNING = "\033[93m"
+    FAIL = "\033[91m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
 
 
 # run app at first time, get initialCode
@@ -45,7 +46,9 @@ initialCode = inspect.getsource(main)
 
 
 # prompt user that loader is runing
-print(bcolors.HEADER, """
+print(
+    bcolors.HEADER,
+    """
 
 
     **********************************************************************
@@ -56,10 +59,14 @@ print(bcolors.HEADER, """
     *         crafting beautiful, fast user experiences for web          *
     **********************************************************************
 
- """, bcolors.ENDC)
+ """,
+    bcolors.ENDC,
+)
 print()
 print(bcolors.OKGREEN, "server started successfully ✓", bcolors.ENDC)
-print(bcolors.BOLD, "____________________________________________________", bcolors.BOLD)
+print(
+    bcolors.BOLD, "____________________________________________________", bcolors.BOLD
+)
 print()
 print("waiting for changes.")
 
@@ -98,7 +105,8 @@ def getCode():
             # prompt ui have been updated
             print()
             print(
-                f"{bcolors.OKGREEN}➤ changes updated in : {bcolors.ENDC}{OsTimeNew-OsTimeInitial}")
+                f"{bcolors.OKGREEN}➤ changes updated in : {bcolors.ENDC}{OsTimeNew-OsTimeInitial}"
+            )
             print()
         except Exception as err:
             print(bcolors.FAIL, "➤ Error:", err, bcolors.ENDC)
@@ -109,8 +117,8 @@ def getCode():
 while True:
     try:
         asyncio.run(getNewCode())
-    # wait to take lest changes
-    # then call getCode fun
+        # wait to take lest changes
+        # then call getCode fun
         getCode()
     except KeyboardInterrupt as err:
         print(bcolors.OKBLUE, "server stop runing ●", bcolors.ENDC)
