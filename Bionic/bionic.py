@@ -2,7 +2,7 @@
 # There is chance to brake for program
 
 
-# improting reqired modules
+# importing the reqired modules
 from typing import Tuple
 import sys
 
